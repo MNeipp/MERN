@@ -1,28 +1,24 @@
-function Ninja(name, health = 100){
+function Ninja(name){
     var self = this;
     self.name = name;
+    self.health = 100
     var speed = 3
     var strength = 3
-    var stats = function(){
-        console.log(`My speed is ${speed}, my strength is ${strength}, and I have ${health} health remaining.`)
-    }
-    var drink = function(){
-        health += 10
-    }
-    self.sayName = function(){
-        console.log(`My name is ${self.name}!`)
-        return self
-    }
     self.showStats = function(){
-        stats()
-        return self
-    }
-    self.drinkSake = function(){
-        drink()
-        return self
+        console.log(`My speed is ${speed}, my strength is ${strength}, and I have ${self.health} health remaining.`)
+        return this
     }
 }
+    Ninja.prototype.sayName = function(){
+        console.log(`My name is ${this.name}!`)
+        return this
+    }
+    Ninja.prototype.drinkSake = function(){
+        this.health += 10;
+        return this
+    }
 
-var ninja1= new Ninja("Bob")
 
-ninja1.sayName().showStats().drinkSake().showStats()
+const ninja1= new Ninja("Bob")
+
+ninja1.showStats().sayName().drinkSake().showStats()
