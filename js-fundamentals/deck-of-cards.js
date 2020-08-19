@@ -29,9 +29,9 @@ class Card {
 class Deck{
     constructor(){
         this._deck = []
-        for (let i = 0; i < suits.length; i++){
+        for (var suit of suits){
             for (const key in cardValue) {
-               var x = new Card(key, cardValue[key],suits[i])
+               var x = new Card(key, cardValue[key],suit)
                 this._deck.push(x)
             }
         }
@@ -76,12 +76,10 @@ class Player{
 
 
 
-x =new Deck()
-me = new Player("Mason")
+const x =new Deck()
 x.shuffle()
-x.deal()
-me.draw(x).draw(x).draw(x)
-me.showHand()
+const mason = new Player("Mason")
+mason.draw(x).draw(x).draw(x).showHand()
 
 
 
