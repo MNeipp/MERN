@@ -1,13 +1,18 @@
 function fib() {
-    var arr = [0,1]
+    let prev = 0;
+    let curr = 1;
+   
     function nacci() {
-        var num = arr[arr.length-1]
-        var num2 = arr[arr.length-2]
-        arr.push(num+num2)
-        console.log(arr[arr.length-1])
+      const temp = prev;
+   
+      console.log(curr);
+   
+      prev = curr;
+      curr = curr + temp;
     }
+   
     return nacci
-  }
+   }
   var fibCounter = fib();
   fibCounter() // should console.log "1"
   fibCounter() // should console.log "1"
