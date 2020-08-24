@@ -1,3 +1,7 @@
 #root {
-  margin-right:10px;
+  margin: 10px;
+}
+
+.Hello{
+  margin: 0 auto 0;
 }
