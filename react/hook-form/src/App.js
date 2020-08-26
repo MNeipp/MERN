@@ -14,9 +14,9 @@ function App() {
     <div className="App">
       <Form inputs = {state} setInputs = {setState}/>
       <Results data = {state}/>
+
       
     </div>
   );
 }
-
 export default App;
