@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Results = (props) => {
-    const {firstName, lastName, email, password, confirmPassword} = props.data
+const Results = ({data}) => {
+    const {firstName, lastName, email, password, confirmPassword} = data
     return(
         <div>
             <h2>Results</h2>
