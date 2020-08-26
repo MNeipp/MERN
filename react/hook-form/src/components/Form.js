@@ -10,7 +10,7 @@ const Form = props => {
     const getInfo = e => {
         setInputs({
             ...inputs,
-            [e.target.name]: e.target.value
+            [e.target.name]: (e.target.value)
         })
         if(inputs.firstName.length < 1){
             setFirstNameError("Please enter a first name")
