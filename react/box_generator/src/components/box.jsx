@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Box = ({color, height}) => {
     const boxStyle = {
         background: color, 

@@ -1,0 +1,26 @@
+.container
+{
+    padding-top: 20px;
+}
+.labels
+{
+    display: inline-block;
+    padding:5px;
+    padding-bottom: 0;
+}
+.content
+{
+    width:800px;
+    height: 300px;
+    border: black 2px solid;
+    margin-top: 5px;
+    padding:10px
+}
+.clicked
+{
+    display: inline-block;
+    padding:5px;
+    padding-bottom: 0;
+    background-color: black;
+    color:white
+}
