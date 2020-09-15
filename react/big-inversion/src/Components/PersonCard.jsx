@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 
 
-const PersonCard = props => {
+const PersonCard = (props) => {
     const [age, setAge] = useState(props.age)
     const onClick = () =>{
         setAge(age + 1)
