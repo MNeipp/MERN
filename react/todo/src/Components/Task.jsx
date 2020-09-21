@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 
 
 const Task = ({task, taskArray, index, setTask}) => {
-    const [checked, setChecked] = useState(false)
+    const [checked, setChecked] = useState(null)
     const deleteTask = () =>{
-        setTask(() => taskArray.filter(task => task.indexOf(task) !== index)
+        console.log()
+        setTask(() => taskArray.filter(task => taskArray.indexOf(task) !== index)
     );}
 
     return (
