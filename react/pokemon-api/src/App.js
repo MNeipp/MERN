@@ -6,7 +6,7 @@ function App() {
   const [pokedex, setPokedex] = useState([])
   const getPokemon = () => {
       axios.get(`https://pokeapi.co/api/v2/pokemon`)
-      .then (response => setPokedex(response['data']['results']))
+      .then (response => setPokedex(response.data.results))
     }
   
 
