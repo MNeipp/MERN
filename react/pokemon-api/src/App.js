@@ -1,15 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Results from './components/Results'
+import axios from 'axios'
 
-let i = 1
 function App() {
   const [pokedex, setPokedex] = useState([])
   const getPokemon = () => {
-      fetch(`https://pokeapi.co/api/v2/pokemon`)
-      .then(response => response.json())
-      // .then(response => console.log(response['results']))
-      .then (response => setPokedex(response['results']))
-      i++
+      axios.get(`https://pokeapi.co/api/v2/pokemon`)
+      .then (response => setPokedex(response['data']['results']))
     }
   
 
